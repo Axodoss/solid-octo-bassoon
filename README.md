@@ -7,3 +7,4 @@
 * https://mgba.io/
 * http://www.devrs.com/gb/hmgd/gbtd.html
 * http://www.devrs.com/gb/hmgd/gbmb.html
+* https://bgb.bircd.org/
