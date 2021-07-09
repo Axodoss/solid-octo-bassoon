@@ -10,7 +10,7 @@
 
 INTERNAL void Reset()
 {
-	GameContext.MainLoop = EnterSplash;
+	GameContext.UpdateFunction = EnterSplash;
 	GameContext.Input = GameContext.LastInput = joypad();
 
 	// TODO: entity, player, etc.
@@ -24,7 +24,6 @@ void main()
 	{
 		GameContext.LastInput = GameContext.Input;
 		GameContext.Input = joypad();
-
-		GameContext.MainLoop();
+		GameContext.UpdateFunction();
 	}
 }

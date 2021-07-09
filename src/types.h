@@ -34,7 +34,7 @@ typedef struct
 
 typedef struct
 {
-	EmptyCallback MainLoop;
+	EmptyCallback UpdateFunction;
 
 	UINT8 Input;
 	UINT8 LastInput;

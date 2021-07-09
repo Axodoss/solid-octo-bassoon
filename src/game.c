@@ -4,6 +4,11 @@ INTERNAL void RunGamePause()
 	// TODO: game pause loop
 }
 
+INTERNAL void EnterGamePause()
+{
+	// TODO: enter game pause
+}
+
 INTERNAL void RunGameLoop()
 {
 	// TODO: main game loop
@@ -26,11 +31,6 @@ INTERNAL void RunGameLoop()
 	}
 }
 
-INTERNAL void EnterGamePause()
-{
-	// TODO: enter game pause
-}
-
 void EnterGameLoop()
 {
 	// TODO: enter game loop
@@ -42,6 +42,6 @@ void EnterGameLoop()
 		move_sprite(0, 88, 78);
 		SHOW_SPRITES;
 
-		GameContext.MainLoop = RunGameLoop;
+		GameContext.UpdateFunction = RunGameLoop;
 	}
 }
