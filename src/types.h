@@ -21,8 +21,6 @@ typedef INT16 i16;
 typedef UINT8 u8;
 typedef UINT16 u16;
 
-typedef void (*EmptyCallback)();
-
 // static entity information
 typedef struct
 {
@@ -57,7 +55,7 @@ typedef struct
 	i16 Velocity[2];
 	i16 Acceleration[2];
 
-	u8 FireDisabled; // weapon fire counter, 0 = player can fire the weapon
+	u8 FireDisabled; // weapon fire counter in frames, 0 = player can fire the weapon
 
 	u16 Upgrades;
 	u16 State; // airborn, ...
@@ -66,10 +64,12 @@ typedef struct
 // all the global values in the game in a single object
 typedef struct
 {
-	EmptyCallback UpdateFunction;
+	void (*UpdateFunction)();
 
 	u8 Input;
 	u8 LastInput;
+
+	u8 WorldIndex;
 
 	entity_t Entities[MAX_ENTITIES];
 	u8 NumberOfEntities;
